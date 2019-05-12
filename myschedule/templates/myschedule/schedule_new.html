@@ -1,0 +1,19 @@
+{% extends "myschedule/base.html" %}
+{% block content %}
+
+
+    <head>
+        <title>NEW</title>
+    </head>
+
+    <body>
+        <h1>글쓰기 페이지!!</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button type = "submit">저장</button>
+        </form>
+    </body>
+
+{% endblock %}
+
